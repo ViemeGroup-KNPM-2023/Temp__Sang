@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VieSky Management</title>
+        <link rel="stylesheet" href="static/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="NavBar" id="header">
+                <div class="Navbar__left">
+                    <div class="NavBar__logo">
+                        <button class="btnbar" type="button" name="btnbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="#">
+                            <img src="assets/images/logo.jfif" alt="logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="NavBar__center">
+                    <div class="Navbar__Search Search">
+                        <input type="search" placeholder="Tìm kiếm" />
+                        <button type="submit" class="btnSearch">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="NavBar__right">
+                    <div class="NavBar__right__infoUser">
+                        <div class="boxInfo_left">
+                            <div id="avatar">
+                                <img
+                                    src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="boxInfo_right">
+                            <h4 class="NavBar__nameOffice">Quản lý</h4>
+                            <h4 class="NavBar__fullName">Nguyễn Văn A</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="SlideBar">
+                <div class="SlideBar__navigationRail">
+                    <ul class="SlideBar__list">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-binoculars"></i>
+                                <span class="SlideBar__tile">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-store"></i>
+                                <span class="SlideBar__tile">Bán hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-file-invoice"></i>
+                                <span class="SlideBar__tile">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-handshake"></i>
+                                <span class="SlideBar__tile">Nhà cung cấp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-truck-loading"></i>
+                                <span class="SlideBar__tile">Quản lý kho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="SlideBar__tile">Lịch làm việc</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-utensils"></i>
+                                <span class="SlideBar__tile">Thực đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-chart-bar"></i>
+                                <span class="SlideBar__tile">Doanh thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-users"></i>
+                                <span class="SlideBar__tile">Nhân viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="SlideBar__tile">Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="SlideBar__content">
+                    <!-- Nội dung của từng trang -->
+                    <div class="content">
+                        <!-- Trang chủ -->
+                        <div class="main-page">
+                            <p class="date">Ngày 19 tháng 02 năm 2023</p>
+                            <div class="statistical-count">
+                                <div class="statistical-item">
+                                    <div class="statistical-item__header">
+                                        <i class="far fa-clipboard"></i>
+                                        <p class="statistical-item-title">Tổng số hóa đơn</p>
+                                    </div>
+                                    <p class="statistical-item-count">120</p>
+                                </div>
+                                <div class="statistical-item">
+                                    <div class="statistical-item__header">
+                                        <i class="fas fa-signal"></i>
+                                        <p class="statistical-item-title">Doanh thu</p>
+                                    </div>
+                                    <p class="statistical-item-count">15.040.000 đ</p>
+                                </div>
+                                <div class="statistical-item">
+                                    <div class="statistical-item__header">
+                                        <i class="fas fa-user-times"></i>
+                                        <p class="statistical-item-title">Món đã hết</p>
+                                    </div>
+                                    <p class="statistical-item-count">4</p>
+                                </div>
+                                <div class="statistical-item">
+                                    <div class="statistical-item__header">
+                                        <i class="fas fa-users"></i>
+                                        <p class="statistical-item-title">Món đang chế biến</p>
+                                    </div>
+                                    <p class="statistical-item-count">12</p>
+                                </div>
+                            </div>
+                            <div class="BestSeller">
+                                <div class="BestSeller__header">
+                                    <p class="BestSeller__header__left">Best Seller</p>
+                                    <p class="BestSeller__header__right">Trong tuần<i class="fas fa-sort-down"></i></p>
+                                </div>
+                                <div class="BestSeller__Menu__header"></div>
+                                <div class="BestSeller__Menu__content">
+                                    <div class="BestSeller__Menu__item">
+                                        <p class="Food__title">Bò hầm rau củ kiểu Pháp</p>
+                                        <img class="Food__img" src="assets/images/BoHamRauCu.png" />
+                                        <p class="Food__Sell__count">1200</p>
+                                    </div>
+                                    <div class="BestSeller__Menu__item">
+                                        <p class="Food__title">Salad đậu đen Mexico</p>
+                                        <img class="Food__img" src="assets/images/Salad.jpg" />
+                                        <p class="Food__Sell__count">1000</p>
+                                    </div>
+                                    <div class="BestSeller__Menu__item">
+                                        <p class="Food__title">Lẩu VieSky</p>
+                                        <img class="Food__img" src="assets/images/Lau.webp" />
+                                        <p class="Food__Sell__count">860</p>
+                                    </div>
+                                </div>
+                                <p class="Food__Sell">Số Lượng Đã Bán:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

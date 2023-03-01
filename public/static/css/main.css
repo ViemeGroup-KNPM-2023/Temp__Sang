@@ -199,7 +199,7 @@
 
 .SlideBar__content {
     width: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .SlideBar__content .content {
@@ -263,7 +263,7 @@
 
 .BestSeller {
     padding: 16px;
-    width: 98%;
+    width: 98.5%;
     background-color: #fff;
     margin: 8px;
     border-radius: 8px;
@@ -326,4 +326,156 @@
 
 .Food__Sell {
     padding-top: 138px;
+}
+
+.footer {
+    width: 98.5%;
+    height: 150px;
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar {
+    width: 45%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.calendar-header {
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.calendar-header-title {
+    padding: 8px;
+}
+
+.calendar-header-viewAll {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-header-viewAll .fa-chevron-down {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.calendar-sub-header {
+    width: 99%;
+    margin: 0 2px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #d5e6fb;
+}
+
+.calendar-sub-header-item {
+    width: 33.33333%;
+    text-align: center;
+}
+
+.calendar-items {
+    overflow-y: scroll;
+    max-height: 64px;
+}
+
+.calendar-items::-webkit-scrollbar {
+    width: 0px;
+}
+
+.calendar-item-wrapper {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-item {
+    width: 33.33333%;
+    text-align: center;
+}
+
+.food-status {
+    width: 54%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.food-status-header {
+    display: flex;
+    align-item: center;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.food-status-header-title {
+    padding: 8px;
+}
+
+.food-status-header-viewAll {
+    display: flex;
+    align-items: center;
+}
+
+.food-status-header-viewAll .fa-chevron-down {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.food-status-sub-header {
+    width: 99%;
+    margin: 0 2px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #d5e6fb;
+}
+
+.food-status-sub-header-item {
+    width: 33.33333%;
+    text-align: center;
+}
+
+.food-status-items {
+    overflow-y: scroll;
+    max-height: 64px;
+}
+
+.food-status-items::-webkit-scrollbar {
+    width: 0px;
+}
+
+.food-status-item-wrapper {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.food-status-item {
+    width: 33.33333%;
+    text-align: center;
+}
+
+.food-status-item .done-wrapper {
+    padding: 2px 0;
+    border-radius: 99px;
+    background-color: #28ebb0;
+}
+
+.food-status-item .pending-wrapper {
+    padding: 2px 0;
+    border-radius: 99px;
+    background-color: #fdd888;
+}
+
+.food-status-item .doNot-wrapper {
+    padding: 2px 0;
+    border-radius: 99px;
+    background-color: #db350f;
 }

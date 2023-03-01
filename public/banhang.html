@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VieSky Management</title>
+        <link rel="stylesheet" href="static/css/banhang.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div id="root">
+            <div class="NavBar" id="header">
+                <div class="Navbar__left">
+                    <div class="NavBar__logo">
+                        <button class="btnbar" type="button" name="btnbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="#">
+                            <img src="assets/images/logo.jfif" alt="logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="NavBar__center">
+                    <div class="Navbar__Search Search">
+                        <input type="search" placeholder="Tìm kiếm" />
+                        <button type="submit" class="btnSearch">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="NavBar__right">
+                    <div class="NavBar__right__infoUser">
+                        <div class="boxInfo_left">
+                            <div id="avatar">
+                                <img
+                                    src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="boxInfo_right">
+                            <h4 class="NavBar__nameOffice">Quản lý</h4>
+                            <h4 class="NavBar__fullName">Nguyễn Văn A</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="SlideBar">
+                <div class="SlideBar__navigationRail">
+                    <ul class="SlideBar__list">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-binoculars"></i>
+                                <span class="SlideBar__tile">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-store"></i>
+                                <span class="SlideBar__tile">Bán hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-file-invoice"></i>
+                                <span class="SlideBar__tile">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-handshake"></i>
+                                <span class="SlideBar__tile">Nhà cung cấp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-truck-loading"></i>
+                                <span class="SlideBar__tile">Quản lý kho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="SlideBar__tile">Lịch làm việc</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-utensils"></i>
+                                <span class="SlideBar__tile">Thực đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-chart-bar"></i>
+                                <span class="SlideBar__tile">Doanh thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-users"></i>
+                                <span class="SlideBar__tile">Nhân viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="SlideBar__tile">Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="SlideBar__content">
+                    <!-- Nội dung của từng trang -->
+                    <div class="content">
+                        <!-- Trang chủ -->
+                        <div class="bill-page">
+                            <div class="bill-page__header">
+                                <h3>Quản lý hóa đơn</h3>
+                                <div class="select-time">
+                                    <div class="select-time-title">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p>Chọn khoảng thời gian</p>
+                                    </div>
+                                    <div class="select-time__hover">Test</div>
+                                </div>
+                                <form>
+                                    <input class="input" placeholder="Từ ngày" />
+                                    <input class="input" placeholder="Đến ngày" />
+                                </form>
+                                <button class="btn-excel">Xuất Excel</button>
+                            </div>
+                            <div class="main-bill-wrapper">
+                                <div class="main-bill-header">
+                                    <div class="header-item">Mã hóa đơn</div>
+                                    <div class="header-item">Trạng thái</div>
+                                    <div class="header-item">Thời gian vào</div>
+                                    <div class="header-item">Thời gian ra</div>
+                                    <div class="header-item">Tổng tiền</div>
+                                    <div class="header-item">Chi tiết</div>
+                                </div>
+                                <div class="main-bill-content">
+                                    <span>
+                                        <div id="00001" class="main-bill-item-wrapper">
+                                            <div class="item">#00001</div>
+                                            <!-- class item-done-wrapper là đã xong -->
+                                            <div class="item item-done-wrapper">Đã Thanh Toán</div>
+                                            <div class="item">17:09:40</div>
+                                            <div class="item">18:24:40</div>
+                                            <div class="item">200.000</div>
+                                            <div
+                                                class="item"
+                                                onclick="getElementById('00001').classList.toggle('active')"
+                                            >
+                                                <i class="fa-sharp fa-regular fa-eye item-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="bill-detail">
+                                            <div class="bill-detail-header">
+                                                <h4 class="bill-detail-header-title">Chi tiết hóa đơn</h4>
+                                                <div class="bill-detail-header-info">
+                                                    <div class="">#00001</div>
+                                                    <!-- class bill-detail-status-done là đã xong -->
+                                                    <div class="bill-detail-status-done">Đã Thanh Toán</div>
+                                                </div>
+                                                <p onclick="getElementById('00001').classList.toggle('active')">
+                                                    <i class="fa-solid fa-xmark bill-detail-header-close"></i>
+                                                </p>
+                                            </div>
+                                            <div class="bill-detail-content">
+                                                <div class="bill-detail-content-info">
+                                                    <div class="info-line">
+                                                        <b>Thu ngân: </b>
+                                                        <span>Nguyễn Văn Tín</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Bàn: </b>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Thời gian vào: </b>
+                                                        <span>7:09:40</span>
+                                                        <span>20-02-2023</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Thời gian ra: </b>
+                                                        <span>9:35:03</span>
+                                                        <span>20-02-2023</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bill-list-header">
+                                                    <b class="bill-list-header-item">Tên món</b>
+                                                    <b class="bill-list-header-item">Số Lượng</b>
+                                                    <b class="bill-list-header-item">Đơn giá</b>
+                                                    <b class="bill-list-header-item">Thành tiền</b>
+                                                </div>
+                                                <div class="bill-list-items">
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Lạc rang</div>
+                                                        <div class="bill-list-item-info">2</div>
+                                                        <div class="bill-list-item-info">20.000</div>
+                                                        <div class="bill-list-item-info">40.000</div>
+                                                    </div>
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Bia Hà Nội</div>
+                                                        <div class="bill-list-item-info">1</div>
+                                                        <div class="bill-list-item-info">15.000</div>
+                                                        <div class="bill-list-item-info">15.000</div>
+                                                    </div>
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Cá Nướng Than</div>
+                                                        <div class="bill-list-item-info">2</div>
+                                                        <div class="bill-list-item-info">200.000</div>
+                                                        <div class="bill-list-item-info">400.000</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bill-detail-money">
+                                                    <b>Tổng tiền</b>
+                                                    <span>999.999đ</span>
+                                                </div>
+                                                <hr />
+                                                <div class="bill-detail-money">
+                                                    <span>Tiền mặt</span>
+                                                    <span>1.000.000đ</span>
+                                                </div>
+                                                <div class="bill-detail-money">
+                                                    <b>Trả lại khách</b>
+                                                    <b>1đ</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span>
+                                        <div id="00002" class="main-bill-item-wrapper">
+                                            <div class="item">#00002</div>
+                                            <!-- class item-wrapper là chưa xong -->
+                                            <div class="item item-wrapper">Chưa Thanh Toán</div>
+                                            <div class="item">17:09:40</div>
+                                            <div class="item">18:24:40</div>
+                                            <div class="item">200.000</div>
+                                            <div
+                                                class="item"
+                                                onclick="getElementById('00002').classList.toggle('active')"
+                                            >
+                                                <i class="fa-sharp fa-regular fa-eye item-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="bill-detail">
+                                            <div class="bill-detail-header">
+                                                <h4 class="bill-detail-header-title">Chi tiết hóa đơn</h4>
+                                                <div class="bill-detail-header-info">
+                                                    <div class="">#00002</div>
+                                                    <!-- class bill-detail-status là chưa xong -->
+                                                    <div class="bill-detail-status">Chưa Thanh Toán</div>
+                                                </div>
+                                                <p onclick="getElementById('00002').classList.toggle('active')">
+                                                    <i class="fa-solid fa-xmark bill-detail-header-close"></i>
+                                                </p>
+                                            </div>
+                                            <div class="bill-detail-content">
+                                                <div class="bill-detail-content-info">
+                                                    <div class="info-line">
+                                                        <b>Thu ngân: </b>
+                                                        <span>Nguyễn Văn Tín</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Bàn: </b>
+                                                        <span>2</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Thời gian vào: </b>
+                                                        <span>7:09:40</span>
+                                                        <span>20-02-2023</span>
+                                                    </div>
+                                                    <div class="info-line">
+                                                        <b>Thời gian ra: </b>
+                                                        <span>9:35:03</span>
+                                                        <span>20-02-2023</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bill-list-header">
+                                                    <b class="bill-list-header-item">Tên món</b>
+                                                    <b class="bill-list-header-item">Số Lượng</b>
+                                                    <b class="bill-list-header-item">Đơn giá</b>
+                                                    <b class="bill-list-header-item">Thành tiền</b>
+                                                </div>
+                                                <div class="bill-list-items">
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Lạc rang</div>
+                                                        <div class="bill-list-item-info">2</div>
+                                                        <div class="bill-list-item-info">20.000</div>
+                                                        <div class="bill-list-item-info">40.000</div>
+                                                    </div>
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Bia Hà Nội</div>
+                                                        <div class="bill-list-item-info">1</div>
+                                                        <div class="bill-list-item-info">15.000</div>
+                                                        <div class="bill-list-item-info">15.000</div>
+                                                    </div>
+                                                    <div class="bill-list-item">
+                                                        <div class="bill-list-item-info">Cá Nướng Than</div>
+                                                        <div class="bill-list-item-info">2</div>
+                                                        <div class="bill-list-item-info">200.000</div>
+                                                        <div class="bill-list-item-info">400.000</div>
+                                                    </div>
+                                                </div>
+                                                <div class="bill-detail-money">
+                                                    <b>Tổng tiền</b>
+                                                    <span>999.999đ</span>
+                                                </div>
+                                                <hr />
+                                                <div class="bill-detail-money">
+                                                    <span>Tiền mặt</span>
+                                                    <span>1.000.000đ</span>
+                                                </div>
+                                                <div class="bill-detail-money">
+                                                    <b>Trả lại khách</b>
+                                                    <b>1đ</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Xuất hóa đơn page -->
+                        <div class="exportInvoice">
+                            <div class="exportInvoice-blur"></div>
+                            <div class="exportInvoice-content">
+                                <h4 class="exportInvoice-content-title">Chọn khoảng thời gian muốn xuất file</h4>
+                                <div class="exportInvoice-content-calendar">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>20 tháng 2, 2023 - 26 tháng 2, 2023</p>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                                <div class="exportInvoice-content-calendar-main">
+                                    <div class="left"></div>
+                                    <div class="right">
+                                        <div class="time-exportInvoice">Hai cái lịch luôn đéo biết code</div>
+                                        <div class="exportInvoice-update">
+                                            <button class="update-cancelBtn">Hủy</button>
+                                            <button class="update-Btn">Cập nhật</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exportInvoice-control">
+                                    <button class="exportInvoice-control-close">Hủy</button>
+                                    <button class="exportInvoice-control-export">Xuất</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const listDays = [
+            {
+                checked: 'checked',
+                day: 'Hôm nay',
+            },
+            {
+                checked: '',
+                day: 'Hôm qua',
+            },
+            {
+                checked: '',
+                day: '7 ngày qua',
+            },
+            {
+                checked: '',
+                day: '14 ngày qua',
+            },
+            {
+                checked: '',
+                day: '28 ngày qua',
+            },
+            {
+                checked: '',
+                day: 'Tháng này',
+            },
+            {
+                checked: '',
+                day: 'Quý này',
+            },
+            {
+                checked: '',
+                day: 'Tùy chỉnh',
+            },
+        ];
+        const btnExcel = document.querySelector('.btn-excel');
+        btnExcel.onclick = () => {
+            const exportInvoice = document.querySelector('.exportInvoice');
+            exportInvoice.classList.add('show');
+            const allBillItem = document.querySelectorAll('.main-bill-item-wrapper');
+
+            allBillItem.forEach((billItem) => {
+                billItem.classList.remove('active');
+            });
+        };
+        const excelClose = document.querySelector('.exportInvoice-control-close');
+        excelClose.onclick = () => {
+            const exportInvoice = document.querySelector('.exportInvoice');
+            exportInvoice.classList.remove('show');
+        };
+
+        const dayWrapper = listDays.map((day, index) => {
+            return `<div class="day-wrapper">
+                        <div onclick="handleChecked(${index})" key="${index}" id="${index}" class="rounded ${day.checked}"></div>
+                        <p>${day.day}</p>
+                    </div>`;
+        });
+        document.querySelector('.left').innerHTML = dayWrapper.join('');
+
+        function handleChecked(index) {
+            var rounded = document.querySelectorAll('.rounded');
+            rounded.forEach((item) => {
+                item.classList.remove('checked');
+            });
+            var x = document.getElementById(`${index}`);
+            x.classList.add('checked');
+        }
+    </script>
+</html>

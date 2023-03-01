@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Oswald&family=Pacifico&family=Roboto&display=swap');
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* Header */
+.NavBar {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    padding: 0 16px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.NavBar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NavBar__logo button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.NavBar__logo button .fa-bars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+}
+
+.NavBar__logo a {
+    text-decoration: none;
+    width: 56px;
+    height: 56px;
+    margin-left: 8px;
+}
+
+.NavBar__logo a img {
+    height: 100%;
+    width: 100%;
+}
+
+/* NavBar center */
+
+/* Element Search */
+.Search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 600px;
+    border-radius: 40px;
+    border: 1px solid rgba(110, 144, 160, 0.4);
+    padding: 0 16px;
+}
+
+.Search .btnSearch {
+    border: 0;
+    background-color: #ffffff;
+    height: 24px;
+    width: 24px;
+}
+
+.Search input {
+    height: 24px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.Search .btnSearch .fa-search {
+    font-size: 18px;
+    padding: 3px;
+    color: #c4cacd;
+}
+
+/* Navbar right */
+.NavBar__right__infoUser {
+    display: flex;
+    background-color: rgba(219, 231, 245, 1);
+    height: 48px;
+    width: 200px;
+    padding: 8px;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.boxInfo_right {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+#avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+#avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* SlideBar */
+
+.SlideBar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+/* Navigation Rail */
+.SlideBar__navigationRail {
+    width: 224px;
+    padding: 0 12px;
+}
+
+.SlideBar__list li {
+    list-style-type: none;
+    margin: 12px 0;
+    height: 40px;
+    width: 200px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.SlideBar__list li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.SlideBar__list li:hover {
+    background-color: rgba(213, 230, 251, 1);
+    border-radius: 8px;
+}
+
+.SlideBar__list li a .fas,
+.SlideBar__list li a .far {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #030303;
+}
+
+.SlideBar__tile {
+    font-size: 16px;
+    width: 132px;
+    line-height: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #0f0f0f;
+}
+
+/* SlideBar content */
+
+.SlideBar__content {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.SlideBar__content .content {
+}
+
+.content {
+    padding: 16px;
+    background-color: #d5e6fb;
+}
+
+.bill-page {
+    width: 100%;
+    height: 100vh;
+}
+
+.bill-page__header {
+    display: flex;
+    align-items: center;
+}
+
+.bill-page__header .select-time {
+    padding: 8px 21px;
+    background-color: #ffb921;
+    border-radius: 4px;
+    margin-left: 100px;
+    margin-right: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select-time-title {
+    display: flex;
+    align-items: center;
+}
+
+.select-time-title .fa-calendar-days {
+    margin-right: 8px;
+}
+
+.select-time__hover {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    display: none;
+}
+
+.bill-page__header .select-time:hover .select-time__hover {
+    display: block;
+    z-index: 2;
+}
+
+.bill-page__header input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.bill-page__header input:focus {
+    outline: none;
+}
+
+.bill-page__header button {
+    padding: 8px 16px;
+    background-color: #41ba55;
+    border-radius: 4px;
+    margin-left: 66px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 #ccc;
+    font-weight: 600;
+}
+
+.bill-page__header button:hover {
+    opacity: 80%;
+    scale: 105%;
+}
+
+.main-bill-wrapper {
+    width: 100%;
+    max-height: 523px;
+    margin-top: 16px;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.main-bill-header {
+    max-width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: #fff;
+    position: fixed;
+    left: 240px;
+    right: 32px;
+}
+
+.main-bill-header .header-item {
+    width: 16.66666%;
+    text-align: center;
+}
+
+.main-bill-content {
+    margin-top: 48px;
+}
+
+.main-bill-item-wrapper {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.main-bill-item-wrapper .item {
+    width: 16.66666%;
+    text-align: center;
+}
+
+.main-bill-item-wrapper .item-done-wrapper {
+    background-color: #28ebb0;
+    padding: 2px 3px;
+    border-radius: 99px;
+}
+
+.main-bill-item-wrapper .item-wrapper {
+    background-color: #fdd888;
+    padding: 2px 3px;
+    border-radius: 99px;
+}
+
+.main-bill-item-wrapper .item-icon:hover {
+    cursor: pointer;
+}
+
+/* Handle Modal Form */
+.bill-detail {
+    display: none;
+    position: fixed;
+    width: 36%;
+    top: 123px;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.active + .bill-detail {
+    display: block;
+}
+
+.bill-detail-header {
+    width: 460px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.bill-detail-header-title {
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+.bill-detail-header-info {
+    text-align: center;
+}
+
+.bill-detail-header-close {
+    font-size: 24px;
+    margin-left: 100px;
+    margin-right: 28px;
+}
+
+.bill-detail-header-close:hover {
+    cursor: pointer;
+}
+
+.bill-detail-status {
+    margin-top: 2px;
+    background-color: #fdd888;
+    padding: 2px 12px;
+    border-radius: 99px;
+}
+
+.bill-detail-status-done {
+    margin-top: 8px;
+    background-color: #28ebb0;
+    padding: 2px 12px;
+    border-radius: 99px;
+}
+
+.bill-detail-content-info {
+    padding: 8px 16px;
+    border-bottom: 1px solid #000;
+}
+
+.info-line {
+    margin: 8px 0;
+}
+
+.bill-list-header {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.bill-list-header-item {
+    text-align: center;
+    width: 25%;
+}
+
+.bill-list-items {
+    width: 100%;
+}
+
+.bill-list-item {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bill-list-item-info {
+    width: 25%;
+    text-align: center;
+}
+
+.bill-detail-money {
+    width: 100%;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* exportInvoice */
+.exportInvoice {
+    display: none;
+    width: 100%;
+    height: 591px;
+    position: absolute;
+    top: 0;
+    left: 224px;
+    z-index: 10;
+}
+
+.exportInvoice.show {
+    display: block;
+}
+
+.exportInvoice-blur {
+    opacity: 60%;
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+}
+
+.exportInvoice-content {
+    width: 50%;
+    height: 66%;
+    padding: 16px;
+    background-color: #fff;
+    position: absolute;
+    top: 19.5%;
+    left: 16.5%;
+    border-radius: 4px;
+}
+
+.exportInvoice-content-title {
+    text-align: center;
+    padding: 16px;
+}
+
+.exportInvoice-content-calendar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 410px;
+    padding: 4px 8px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
+
+.exportInvoice-content-calendar-main {
+    width: 100%;
+    height: 55%;
+    margin-top: 16px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: flex;
+}
+
+.exportInvoice-content-calendar-main .left {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+
+.left .day-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2.5px 0;
+}
+
+.right {
+    flex: 1;
+}
+
+.right .exportInvoice-update {
+    margin: 26px 8px 16px 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.exportInvoice-update .update-cancelBtn {
+    width: 64px;
+    height: 32px;
+    background-color: #d5e6fb;
+    border: none;
+    box-shadow: 0 2px 4px 0 #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.exportInvoice-update .update-cancelBtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.exportInvoice-update .update-Btn {
+    width: 64px;
+    height: 32px;
+    margin-left: 24px;
+    background-color: #1f7bf2;
+    border: none;
+    box-shadow: 0 2px 4px 0 #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.exportInvoice-update .update-Btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.day-wrapper .rounded {
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 9px 9px;
+    margin: 0 4px;
+}
+
+.day-wrapper .rounded:hover {
+    cursor: pointer;
+}
+
+.rounded.checked {
+    background-color: #1f7bf2;
+}
+
+.exportInvoice-control {
+    margin: 26px 8px 16px 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.exportInvoice-control-close {
+    width: 64px;
+    height: 32px;
+    background-color: #d5e6fb;
+    border: none;
+    box-shadow: 0 4px 8px 0 #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.exportInvoice-control-close:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.exportInvoice-control-export {
+    width: 64px;
+    height: 32px;
+    margin-left: 24px;
+    background-color: #1f7bf2;
+    border: none;
+    box-shadow: 0 4px 8px 0 #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.exportInvoice-control-export:hover {
+    cursor: pointer;
+    opacity: 80%;
+}

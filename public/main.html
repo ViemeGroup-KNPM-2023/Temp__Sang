@@ -7,6 +7,13 @@
         <title>VieSky Management</title>
         <link rel="stylesheet" href="static/css/main.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
         <div id="root">
@@ -118,7 +125,7 @@
                         <div class="main-page">
                             <p class="date">Ngày 19 tháng 02 năm 2023</p>
                             <div class="statistical-count">
-                                <div class="statistical-item">
+                                <!-- <div class="statistical-item">
                                     <div class="statistical-item__header">
                                         <i class="far fa-clipboard"></i>
                                         <p class="statistical-item-title">Tổng số hóa đơn</p>
@@ -145,11 +152,11 @@
                                         <p class="statistical-item-title">Món đang chế biến</p>
                                     </div>
                                     <p class="statistical-item-count">12</p>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="BestSeller">
                                 <div class="BestSeller__header">
-                                    <p class="BestSeller__header__left">Best Seller</p>
+                                    <h4 class="BestSeller__header__left">Best Seller</h4>
                                     <p class="BestSeller__header__right">Trong tuần<i class="fas fa-sort-down"></i></p>
                                 </div>
                                 <div class="BestSeller__Menu__header"></div>
@@ -172,10 +179,127 @@
                                 </div>
                                 <p class="Food__Sell">Số Lượng Đã Bán:</p>
                             </div>
+                            <div class="footer">
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <b class="calendar-header-title">Lịch làm việc của nhân viên</b>
+                                        <div class="calendar-header-viewAll">
+                                            <p>Xem tất cả</p>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-sub-header">
+                                        <div class="calendar-sub-header-item">Tên nhân viên</div>
+                                        <div class="calendar-sub-header-item">Chức vụ</div>
+                                        <div class="calendar-sub-header-item">Ca làm việc</div>
+                                    </div>
+                                    <div class="calendar-items">
+                                        <div class="calendar-item-wrapper">
+                                            <div class="calendar-item">Nguyễn Văn A</div>
+                                            <div class="calendar-item">Phục vụ</div>
+                                            <div class="calendar-item">Ca sáng</div>
+                                        </div>
+                                        <div class="calendar-item-wrapper">
+                                            <div class="calendar-item">Nguyễn Văn A</div>
+                                            <div class="calendar-item">Phục vụ</div>
+                                            <div class="calendar-item">Ca sáng</div>
+                                        </div>
+                                        <div class="calendar-item-wrapper">
+                                            <div class="calendar-item">Nguyễn Văn A</div>
+                                            <div class="calendar-item">Phục vụ</div>
+                                            <div class="calendar-item">Ca sáng</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="food-status">
+                                    <div class="food-status-header">
+                                        <b class="food-status-header-title">Tình trạng lên món</b>
+                                        <div class="food-status-header-viewAll">
+                                            <p>Xem tất cả</p>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="food-status-sub-header">
+                                        <div class="food-status-sub-header-item">Bàn</div>
+                                        <div class="food-status-sub-header-item">Tình trạng chế biến</div>
+                                        <div class="food-status-sub-header-item">Món chưa phục vụ</div>
+                                    </div>
+                                    <div class="food-status-items">
+                                        <div class="food-status-item-wrapper">
+                                            <div class="food-status-item">1</div>
+                                            <div class="food-status-item">
+                                                <div class="done-wrapper">Hoàn thành</div>
+                                            </div>
+                                            <div class="food-status-item">
+                                                <span style="color: #da2f47">0</span><span>/</span
+                                                ><span style="color: #038860">8</span><span>/</span
+                                                ><span style="color: #000">8</span>
+                                            </div>
+                                        </div>
+                                        <div class="food-status-item-wrapper">
+                                            <div class="food-status-item">2</div>
+                                            <div class="food-status-item">
+                                                <div class="pending-wrapper">Đang làm</div>
+                                            </div>
+                                            <div class="food-status-item">
+                                                <span style="color: #da2f47">2</span><span>/</span
+                                                ><span style="color: #038860">8</span><span>/</span
+                                                ><span style="color: #000">10</span>
+                                            </div>
+                                        </div>
+                                        <div class="food-status-item-wrapper">
+                                            <div class="food-status-item">3</div>
+                                            <div class="food-status-item">
+                                                <div class="doNot-wrapper">Chưa làm</div>
+                                            </div>
+                                            <div class="food-status-item">
+                                                <span style="color: #da2f47">10</span><span>/</span
+                                                ><span style="color: #038860">0</span><span>/</span
+                                                ><span style="color: #000">10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            const statisticals = [
+                {
+                    icon: '<i class="far fa-clipboard"></i>',
+                    title: 'Tổng số hóa đơn',
+                    count: 120,
+                },
+                {
+                    icon: '<i class="fas fa-signal"></i>',
+                    title: 'Doanh thu',
+                    count: 15000000,
+                },
+                {
+                    icon: '<i class="fas fa-user-times"></i>',
+                    title: 'Món đã hết',
+                    count: 4,
+                },
+                {
+                    icon: '<i class="fas fa-users"></i>',
+                    title: 'Món đang chế biến',
+                    count: 12,
+                },
+            ];
+
+            const statistical = statisticals.map((item, index) => {
+                return `<div class="statistical-item">
+                            <div class="statistical-item__header">
+                                ${item.icon}
+                                <p class="statistical-item-title">${item.title}</p>
+                            </div>
+                            <p class="statistical-item-count">${item.count}</p>
+                        </div>`;
+            });
+            document.querySelector('.statistical-count').innerHTML = statistical.join('');
+        </script>
     </body>
 </html>

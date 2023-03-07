@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./static/css/doanhthu.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Vẽ đồ thị -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div class="NavBar" id="header">
+                <div class="Navbar__left">
+                    <div class="NavBar__logo">
+                        <button class="btnbar" type="button" name="btnbar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="#">
+                            <img src="assets/images/logo.jfif" alt="logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="NavBar__center">
+                    <div class="Navbar__Search Search">
+                        <input type="search" placeholder="Tìm kiếm" />
+                        <button type="submit" class="btnSearch">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="NavBar__right">
+                    <div class="NavBar__right__infoUser">
+                        <div class="boxInfo_left">
+                            <div id="avatar">
+                                <img
+                                    src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="boxInfo_right">
+                            <h4 class="NavBar__nameOffice">Quản lý</h4>
+                            <h4 class="NavBar__fullName">Nguyễn Văn A</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="SlideBar">
+                <div class="SlideBar__navigationRail">
+                    <ul class="SlideBar__list">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-binoculars"></i>
+                                <span class="SlideBar__tile">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-store"></i>
+                                <span class="SlideBar__tile">Bán hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-file-invoice"></i>
+                                <span class="SlideBar__tile">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-handshake"></i>
+                                <span class="SlideBar__tile">Nhà cung cấp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-truck-loading"></i>
+                                <span class="SlideBar__tile">Quản lý kho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="SlideBar__tile">Lịch làm việc</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-utensils"></i>
+                                <span class="SlideBar__tile">Thực đơn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-chart-bar"></i>
+                                <span class="SlideBar__tile">Doanh thu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-users"></i>
+                                <span class="SlideBar__tile">Nhân viên</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="SlideBar__tile">Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="SlideBar__content">
+                    <!-- Nội dung trang thống kê doanh thu -->
+                    <div class="content">
+                        <h3 class="revenueStatistics-title">Thống kê doanh thu</h3>
+                        <div class="revenueStatistics-content">
+                            <div class="revenueStatistics-content-calendar">
+                                <i style="margin: 0 18px" class="fa-solid fa-calendar-days"></i>
+                                <span>Chọn khoảng thời gian</span>
+                                <i style="margin: 0 16px 0 150px; font-size: 1.4rem" class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="revenueStatistics-content-calendar-main">
+                                <div class="left"></div>
+                                <div class="right">
+                                    <div class="time-revenueStatistics">Hai cái lịch luôn đéo biết code</div>
+                                    <div class="revenueStatistics-update">
+                                        <button class="update-cancelBtn">Hủy</button>
+                                        <button
+                                            onclick="handleUpdateBtn(); handleRenderChartDefault();"
+                                            class="update-Btn"
+                                        >
+                                            Cập nhật
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sum"></div>
+                            <button onclick="handleCloseBtn()" class="backBtn">Cancel</button>
+                            <div class="graphContainer">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const listDays = [
+            {
+                checked: 'checked',
+                day: 'Hôm nay',
+            },
+            {
+                checked: '',
+                day: 'Hôm qua',
+            },
+            {
+                checked: '',
+                day: '7 ngày qua',
+            },
+            {
+                checked: '',
+                day: '14 ngày qua',
+            },
+            {
+                checked: '',
+                day: '28 ngày qua',
+            },
+            {
+                checked: '',
+                day: 'Tháng này',
+            },
+            {
+                checked: '',
+                day: 'Quý này',
+            },
+            {
+                checked: '',
+                day: 'Tùy chỉnh',
+            },
+        ];
+
+        const fakeData = [
+            {
+                label: ['Hôm nay'],
+                money: [800000],
+            },
+            {
+                label: ['Hôm qua'],
+                money: [700000],
+            },
+            {
+                label: ['ngày-0', 'ngày-1', 'ngày-2', 'ngày-3', 'ngày-4', 'ngày-5', 'ngày-6'],
+                money: [800000, 700000, 850000, 910000, 690000, 750000, 800000],
+            },
+            {
+                label: [
+                    'ngày-0',
+                    'ngày-1',
+                    'ngày-2',
+                    'ngày-3',
+                    'ngày-4',
+                    'ngày-5',
+                    'ngày-6',
+                    'ngày-7',
+                    'ngày-8',
+                    'ngày-9',
+                    'ngày-10',
+                    'ngày-11',
+                    'ngày-12',
+                    'ngày-13',
+                ],
+                money: [
+                    800000, 700000, 850000, 910000, 690000, 750000, 800000, 800000, 700000, 850000, 910000, 690000,
+                    750000, 800000,
+                ],
+            },
+            {
+                label: [
+                    'ngày-0',
+                    'ngày-1',
+                    'ngày-2',
+                    'ngày-3',
+                    'ngày-4',
+                    'ngày-5',
+                    'ngày-6',
+                    'ngày-7',
+                    'ngày-8',
+                    'ngày-9',
+                    'ngày-10',
+                    'ngày-11',
+                    'ngày-12',
+                    'ngày-13',
+                    'ngày-14',
+                    'ngày-15',
+                    'ngày-16',
+                    'ngày-17',
+                    'ngày-18',
+                    'ngày-19',
+                    'ngày-20',
+                    'ngày-21',
+                    'ngày-22',
+                    'ngày-23',
+                    'ngày-24',
+                    'ngày-25',
+                    'ngày-26',
+                    'ngày-27',
+                ],
+                money: [
+                    800000, 700000, 850000, 910000, 690000, 750000, 800000, 800000, 700000, 850000, 910000, 690000,
+                    750000, 800000, 800000, 700000, 850000, 910000, 690000, 750000, 800000, 800000, 700000, 850000,
+                    910000, 690000, 750000, 800000,
+                ],
+            },
+        ];
+
+        const dayWrapper = listDays.map((day, index) => {
+            return `<div class="day-wrapper">
+                        <div onclick="handleChecked(${index}); handleRenderChart(${index});" key="${index}" id="${index}" class="rounded ${day.checked}"></div>
+                        <p>${day.day}</p>
+                    </div>`;
+        });
+        document.querySelector('.left').innerHTML = dayWrapper.join('');
+
+        function handleChecked(index) {
+            var rounded = document.querySelectorAll('.rounded');
+            rounded.forEach((item) => {
+                item.classList.remove('checked');
+            });
+            var x = document.getElementById(`${index}`);
+            x.classList.add('checked');
+        }
+
+        function handleUpdateBtn() {
+            var main = document.querySelector('.revenueStatistics-content-calendar-main');
+            var sum = document.querySelector('.sum');
+            var backBtn = document.querySelector('.backBtn');
+            var graph = document.querySelector('.graphContainer');
+            main.style.display = 'none';
+            graph.style.display = 'block';
+            sum.style.display = 'block';
+            backBtn.style.display = 'block';
+        }
+
+        function handleRenderChartDefault() {
+            var isFirstChecked = document.querySelector('.checked');
+            if (isFirstChecked.attributes.id.value == 0) {
+                handleRenderChart(0);
+            }
+        }
+
+        function handleCloseBtn() {
+            var main = document.querySelector('.revenueStatistics-content-calendar-main');
+            var sum = document.querySelector('.sum');
+            var backBtn = document.querySelector('.backBtn');
+            var graph = document.querySelector('.graphContainer');
+            main.style.display = 'block';
+            graph.style.display = 'none';
+            sum.style.display = 'none';
+            backBtn.style.display = 'none';
+        }
+
+        function handleRenderChart(index) {
+            // Tính tổng tiền
+            const moneyArr = fakeData[index].money;
+            function sumMoney(moneyArr) {
+                let sum = 0;
+                for (let i = 0; i < moneyArr.length; i++) {
+                    sum += moneyArr[i];
+                }
+                return sum;
+            }
+            document.querySelector(
+                '.sum',
+            ).innerHTML = `<h4 class="sum-title">Tổng doanh thu</h4><p class="sum-number">${sumMoney(moneyArr)}</p>`;
+
+            // Render Chart
+            let myChart = document.getElementById('myChart').getContext('2d');
+            Chart.defaults.global.defaultFontFamily = 'Roboto';
+
+            let massPopChart = new Chart(myChart, {
+                type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+                data: {
+                    labels: fakeData[index].label,
+                    datasets: [
+                        {
+                            label: 'VND',
+                            // data chứa dữ liệu tiền bán được của mỗi ngày
+                            data: moneyArr,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255, 99, 132, 0.6)',
+                            ],
+                            borderWidth: 1,
+                            borderColor: '#777',
+                            hoverBorderWidth: 2,
+                            hoverBorderColor: '#000',
+                        },
+                    ],
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Biểu đồ doanh thu',
+                        fontSize: 20,
+                    },
+                    legend: {
+                        display: true,
+                        position: 'right',
+                        labels: {
+                            fontColor: '#000',
+                        },
+                    },
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 0,
+                            bottom: 0,
+                            top: 0,
+                        },
+                    },
+                    tooltips: {
+                        enabled: true,
+                    },
+                },
+            });
+        }
+    </script>
+</html>
